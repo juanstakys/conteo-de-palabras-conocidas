@@ -41,7 +41,7 @@ def funcionNoLaConozco():
     cantEstimadaConocidas = int((cantConocidasSeguras/cantPasadas)*cantPalabrasTotales)
     actualizarInfoEnVentana()
 
-#Inicio Tkinter y título
+#Inicio Tkinter y añado título
 root = Tk()
 root.title("Contador de palabras conocidas")
 
