@@ -41,8 +41,9 @@ def funcionNoLaConozco():
     cantEstimadaConocidas = int((cantConocidasSeguras/cantPasadas)*cantPalabrasTotales)
     actualizarInfoEnVentana()
 
-#Inicio Tkinter
+#Inicio Tkinter y título
 root = Tk()
+root.title("Contador de palabras conocidas")
 
 #Establezco la etiqueta que muestra una palabra aleatoria
 labelPalabraActual = Label(root, text="Palabra de prueba XD", font=("Arial", 40), padx = 30, pady = 30)
