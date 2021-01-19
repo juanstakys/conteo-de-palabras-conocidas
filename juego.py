@@ -19,7 +19,7 @@ def mostrarNuevaPalabra():
     labelPalabraActual.config(text = palabras.pop(randint(0, len(palabras)-1)))
 
 def actualizarInfoEnVentana():
-    labelEstimadoConocidas.config(text= f"Estimado conocidas: {cantEstimadaConocidas}")
+    labelEstimadoConocidas.config(text= f"Palabras conocidas estimadas: {cantEstimadaConocidas}")
     labelPalabrasPasadas.config(text= f"Palabras pasadas: {cantPasadas}")
     labelConocidasSeguras.config(text= f"Conocidas seguras: {cantConocidasSeguras}")
 
@@ -54,7 +54,7 @@ buttonLaConozco = Button(frameBotones, text="La conozco!", font=("Arial", 25), b
 buttonNoLaConozco = Button(frameBotones, text="No la conozco :(", font=("Arial", 25), bg = "#ffcccc", command=funcionNoLaConozco)
 
 #Establezco las etiquetas para los tres datos: Estimado de palabras conocidas, cantidad de palabras pasadas y cantidad de palabras que se marcaron como conocidas
-labelEstimadoConocidas = Label(root, text="Estimado conocidas: ", font=("Arial", 20), bg="#ffcc99")
+labelEstimadoConocidas = Label(root, text="Palabras conocidas estimadas: ", font=("Arial", 20), bg="#ffcc99")
 labelPalabrasPasadas = Label(root, text="Palabras pasadas: ", font=("Arial", 20))
 labelConocidasSeguras = Label(root, text="Conocidas seguras: ", font=("Arial", 20))
 
