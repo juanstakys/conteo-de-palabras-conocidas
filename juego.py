@@ -48,10 +48,11 @@ root.title("Contador de palabras conocidas")
 #Establezco la etiqueta que mostraría una palabra aleatoria
 labelPalabraActual = Label(root, font=("Arial", 40), padx = 30, pady = 30)
 
-#Establezco el frame donde aparecen los dos botones
+#Establezco el frame donde aparecen los tres botones
 frameBotones = Frame(root)
 buttonLaConozco = Button(frameBotones, text="La conozco!", font=("Arial", 25), bg = "#ccffcc", command=funcionLaConozco)
 buttonNoLaConozco = Button(frameBotones, text="No la conozco :(", font=("Arial", 25), bg = "#ffcccc", command=funcionNoLaConozco)
+buttonAprender = Button(frameBotones, text="Quiero aprenderla! :D", font=("Arial", 25), bg = "#ffff00")
 
 #Establezco las etiquetas para los tres datos: Estimado de palabras conocidas, cantidad de palabras pasadas y cantidad de palabras que se marcaron como conocidas
 labelEstimadoConocidas = Label(root, text="Palabras conocidas estimadas: ", font=("Arial", 20), bg="#ffcc99")
@@ -63,7 +64,8 @@ labelPalabraActual.pack()
 frameBotones.pack()
 buttonLaConozco.grid(row = 0, column = 0)
 buttonNoLaConozco.grid(row = 0,column = 1)
-labelEstimadoConocidas.pack()
+buttonAprender.grid(row = 1, column = 0, columnspan = 2)
+labelEstimadoConocidas.pack(pady = (20,0))
 labelPalabrasPasadas.pack()
 labelConocidasSeguras.pack()
 
