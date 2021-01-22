@@ -49,6 +49,7 @@ def aprenderPalabra():
     global palabraActual
     url = "https://dle.rae.es/" + palabraActual
     webbrowser.open_new_tab(url)
+    funcionNoLaConozco()
 
 #Inicio Tkinter y añado título
 root = Tk()
