@@ -68,18 +68,24 @@ labelEstimadoConocidas = Label(root, text="Palabras conocidas estimadas: ", font
 labelPalabrasPasadas = Label(root, text="Palabras pasadas: ", font=("Arial", 20))
 labelConocidasSeguras = Label(root, text="Conocidas seguras: ", font=("Arial", 20))
 
-#Muestro los objetos en la ventana
-labelPalabraActual.pack()
-frameBotones.pack()
-buttonLaConozco.grid(row = 0, column = 0)
-buttonNoLaConozco.grid(row = 0,column = 1)
-buttonAprender.grid(row = 1, column = 0, columnspan = 2)
-labelEstimadoConocidas.pack(pady = (20,0))
-labelPalabrasPasadas.pack()
-labelConocidasSeguras.pack()
+#Defino la función principal
+def run():
 
-#Inicio el programa mostrando ya una palabra
-mostrarNuevaPalabra()
+    #Muestro los objetos en la ventana
+    labelPalabraActual.pack()
+    frameBotones.pack()
+    buttonLaConozco.grid(row = 0, column = 0)
+    buttonNoLaConozco.grid(row = 0,column = 1)
+    buttonAprender.grid(row = 1, column = 0, columnspan = 2)
+    labelEstimadoConocidas.pack(pady = (20,0))
+    labelPalabrasPasadas.pack()
+    labelConocidasSeguras.pack()
 
-#MainLoop
-root.mainloop()
+    #Inicio el programa mostrando ya una palabra
+    mostrarNuevaPalabra()
+
+    #MainLoop
+    root.mainloop()
+
+if __name__ == "__main__":
+    run()
