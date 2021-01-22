@@ -45,8 +45,8 @@ def funcionNoLaConozco():
 root = Tk()
 root.title("Contador de palabras conocidas")
 
-#Establezco la etiqueta que muestra una palabra aleatoria
-labelPalabraActual = Label(root, text="Palabra de prueba XD", font=("Arial", 40), padx = 30, pady = 30)
+#Establezco la etiqueta que mostraría una palabra aleatoria
+labelPalabraActual = Label(root, font=("Arial", 40), padx = 30, pady = 30)
 
 #Establezco el frame donde aparecen los dos botones
 frameBotones = Frame(root)
