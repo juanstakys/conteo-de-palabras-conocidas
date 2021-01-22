@@ -7,6 +7,7 @@ cantPasadas = 0
 cantConocidasSeguras = 0
 cantEstimadaConocidas = 0
 cantPalabrasTotales = 0
+palabraActual = ""
 
 #Guardo las palabras en una lista
 with open("palabrasEspanol.txt", "r") as f:
@@ -16,7 +17,9 @@ with open("palabrasEspanol.txt", "r") as f:
 
 #FUNCIONES
 def mostrarNuevaPalabra():
-    labelPalabraActual.config(text = palabras.pop(randint(0, len(palabras)-1)))
+    global palabraActual
+    palabraActual = palabras.pop(randint(0, len(palabras)-1))
+    labelPalabraActual.config(text = palabraActual)
 
 def actualizarInfoEnVentana():
     labelEstimadoConocidas.config(text= f"Palabras conocidas estimadas: {cantEstimadaConocidas}")
