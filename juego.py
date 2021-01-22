@@ -1,5 +1,6 @@
 from tkinter import *
 from random import randint
+import webbrowser
 
 #Variables iniciales
 palabras = []
@@ -44,6 +45,11 @@ def funcionNoLaConozco():
     cantEstimadaConocidas = int((cantConocidasSeguras/cantPasadas)*cantPalabrasTotales)
     actualizarInfoEnVentana()
 
+def aprenderPalabra():
+    global palabraActual
+    url = "https://dle.rae.es/" + palabraActual
+    webbrowser.open_new_tab(url)
+
 #Inicio Tkinter y añado título
 root = Tk()
 root.title("Contador de palabras conocidas")
@@ -55,7 +61,7 @@ labelPalabraActual = Label(root, font=("Arial", 40), padx = 30, pady = 30)
 frameBotones = Frame(root)
 buttonLaConozco = Button(frameBotones, text="La conozco!", font=("Arial", 25), bg = "#ccffcc", command=funcionLaConozco)
 buttonNoLaConozco = Button(frameBotones, text="No la conozco :(", font=("Arial", 25), bg = "#ffcccc", command=funcionNoLaConozco)
-buttonAprender = Button(frameBotones, text="Quiero aprenderla! :D", font=("Arial", 25), bg = "#ffff00")
+buttonAprender = Button(frameBotones, text="Quiero aprenderla! :D", font=("Arial", 25), bg = "#ffff00", command=aprenderPalabra)
 
 #Establezco las etiquetas para los tres datos: Estimado de palabras conocidas, cantidad de palabras pasadas y cantidad de palabras que se marcaron como conocidas
 labelEstimadoConocidas = Label(root, text="Palabras conocidas estimadas: ", font=("Arial", 20), bg="#ffcc99")
