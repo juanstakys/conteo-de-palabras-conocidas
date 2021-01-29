@@ -11,7 +11,7 @@ cantPalabrasTotales = 0
 palabraActual = ""
 
 #Guardo las palabras en una lista
-with open("palabrasEspanol.txt", "r") as f:
+with open("palabrasEspanol.txt", "r", encoding="utf8") as f:
     palabras = f.readlines()
     cantPalabrasTotales = len(palabras)
 
